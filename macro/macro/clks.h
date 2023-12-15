@@ -20,9 +20,28 @@ public:
     void macrostart();
     void transition(int targetx, int targety, int duration);
     void beep();
+    void menu();
 
 };
 
+void Clks::menu() {
+    std::cout << "======================== Menu ========================\n" << std::endl;
+    std::cout << "1. Clique onde deseja que o macro realize cliques.\n" << std::endl;
+    std::cout << "2. Ao ouvir o beep, você pode começar a gravar seus cliques.\n" << std::endl;
+    std::cout << "3. Aperte (F7) para começar a gravar os cliques.\n" << std::endl;
+    std::cout << "======================== Menu ========================\n" << std::endl;
+
+    while (true) {
+        if (GetAsyncKeyState(0x76) & 0x8000) {
+            beep();
+            regclick();
+            break;
+        }
+        Sleep(200);
+    }
+    std::cout << "clique 'C' para parar ou iniciar o autoclique" << std::endl;
+    macrostart();
+}
 void Clks::getpositionM() {
     POINT positionCursor;
     if (GetCursorPos(&positionCursor)) {
@@ -39,6 +58,13 @@ void Clks::beep() {
 }
 
 void Clks::regclick() {
+    std::cout << "========================================================================\n" << std::endl;
+
+    std::cout << "aperte (F8) para parar de gravar os cliques.\n" << std::endl;
+    std::cout << "ao escutar o beep significa que o macro ja esta configurado\n" << std::endl
+        ;
+    std::cout << "========================================================================" << std::endl;
+
     while (!valida) {
         if (GetAsyncKeyState(0x01)) {
             getpositionM();
