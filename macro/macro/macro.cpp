@@ -4,7 +4,42 @@
 #include "htks.h"
 
 
-int main()
+void question()
+{
+    Hotkey* h1 = new Hotkey();
+    bool controle = false;
+    int keys;
+    std::vector<BYTE> tcl;
+
+    std::cout << "*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*" << std::endl;
+    std::cout << "digite a tecla que voce quer adicionar no macro em hexadecimal exemplo: (0x48)" << std::endl;
+    std::cout << "\nDigite 0 para sair" << std::endl;
+    std::cout << "*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*" << std::endl;
+
+    while (!controle) {
+        Sleep(50);
+        std::cout << "\nqual tecla quer adicionar?: " << std::endl;
+        std::cin >> std::hex >> keys;
+
+        if (keys == 0) {
+            controle = true;
+        }
+        else {
+            tcl.push_back(keys);
+        }
+
+    }
+    std::cout << keys << std::endl;
+    for (int i = 0; i < tcl.size(); i++) {
+        std::cout << tcl[i] << std::endl;
+    }
+    Sleep(50);
+    std::cout << "saimos do loop" << std::endl;
+
+    h1->InputHK(tcl);
+}
+
+void start()
 {
     int choice;
 
@@ -22,44 +57,18 @@ int main()
             cl1->menu();
         }
         else if (choice == 2) {
-            Hotkey* h1 = new Hotkey();
-            bool controle = false;
-            int keys;
-            std::vector<BYTE> tcl;
-
-            std::cout << "digite a tecla que voce quer adicionar no macro em hexadecimal exemplo: (0x48)" << std::endl;
-            std::cout << "\nDigite 0 para sair" << std::endl;
-
-            while (!controle) {
-                Sleep(50);
-                std::cout << "\nqual tecla quer adicionar?: " << std::endl;
-                std::cin >> std::hex >> keys;
-                
-                if (keys==0) {
-                    controle = true;
-                }
-                else {
-                    tcl.push_back(keys);
-                }
-
-            }
-            std::cout << keys << std::endl;
-            for (int i = 0; i < tcl.size(); i++) {
-                std::cout << tcl[i] << std::endl;
-            }
-            Sleep(50);
-            std::cout << "saimos do loop" << std::endl;
-    
-            h1->InputHK(tcl);
+            question();
             break;
         }
         else {
-            std::cout << "digite uma opção valida!" << std::endl;
+            std::cout << "digite uma opcao valida!" << std::endl;
         }
 
     } while (choice != 0);
-    
+}
 
-
+int main()
+{
+    start();
     return 0;
 }
