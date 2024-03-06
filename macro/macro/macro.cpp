@@ -32,6 +32,7 @@ void question()
     std::cout << keys << std::endl;
     for (int i = 0; i < tcl.size(); i++) {
         std::cout << tcl[i] << std::endl;
+        std::cout << "hello world!" << std::endl;
     }
     Sleep(50);
     std::cout << "saimos do loop" << std::endl;
