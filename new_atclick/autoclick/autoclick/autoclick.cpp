@@ -11,5 +11,6 @@ int main() {
 		<< "Segure a tecla (H) para parar de gravar seus clicks" << std::endl;
 
 	m1->Recording();
+	m1->Start();
 	return 0;
 }
