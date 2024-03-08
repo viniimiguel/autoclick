@@ -22,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "atkclick.h",
-              "DocumentMoniker": "C:\\Users\\vinicius\\Desktop\\OpenCoding\\cpp\\Refatoring_01\\autoclick\\new_atclick\\autoclick\\autoclick\\atkclick.h",
-              "RelativeDocumentMoniker": "autoclick\\atkclick.h",
-              "ToolTip": "C:\\Users\\vinicius\\Desktop\\OpenCoding\\cpp\\Refatoring_01\\autoclick\\new_atclick\\autoclick\\autoclick\\atkclick.h",
-              "RelativeToolTip": "autoclick\\atkclick.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAmwAgAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-06T18:40:42.695Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -45,9 +32,22 @@
               "RelativeDocumentMoniker": "autoclick\\atkclick.cpp",
               "ToolTip": "C:\\Users\\vinicius\\Desktop\\OpenCoding\\cpp\\Refatoring_01\\autoclick\\new_atclick\\autoclick\\autoclick\\atkclick.cpp",
               "RelativeToolTip": "autoclick\\atkclick.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAADAAAA",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAAAIAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-06T18:40:32.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "atkclick.h",
+              "DocumentMoniker": "C:\\Users\\vinicius\\Desktop\\OpenCoding\\cpp\\Refatoring_01\\autoclick\\new_atclick\\autoclick\\autoclick\\atkclick.h",
+              "RelativeDocumentMoniker": "autoclick\\atkclick.h",
+              "ToolTip": "C:\\Users\\vinicius\\Desktop\\OpenCoding\\cpp\\Refatoring_01\\autoclick\\new_atclick\\autoclick\\autoclick\\atkclick.h",
+              "RelativeToolTip": "autoclick\\atkclick.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAmwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-06T18:40:42.695Z",
               "EditorCaption": ""
             },
             {

@@ -84,3 +84,48 @@ void Maus::Start() {
 	}
 }
 
+void Maus::LeftClick(int pX, int pY, int click, int duration) {
+	POINT currentPos;
+
+	GetCursorPos(&currentPos);
+
+	int start_x = currentPos.x;
+	int start_y = currentPos.y;
+
+	const int numSteps = 100;
+
+	double stepX = static_cast<double>(pX - start_x) / numSteps;
+	double stepY = static_cast<double>(pY - start_y) / numSteps;
+	for (int i = 1; i <= numSteps; i++)
+	{
+		int currentX = static_cast<int>(start_x + i * stepX);
+		int currentY = static_cast<int>(start_y + i * stepY);
+		SetCursorPos(currentX, currentY);
+		Sleep(duration / numSteps);
+	}
+	mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+	mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+}
+void Maus::RightClick(int pX, int pY, int click, int duration) {
+	POINT currentPos;
+
+	GetCursorPos(&currentPos);
+
+	int start_x = currentPos.x;
+	int start_y = currentPos.y;
+
+	const int numSteps = 100;
+
+	double stepX = static_cast<double>(pX - start_x) / numSteps;
+	double stepY = static_cast<double>(pY - start_y) / numSteps;
+	for (int i = 1; i <= numSteps; i++)
+	{
+		int currentX = static_cast<int>(start_x + i * stepX);
+		int currentY = static_cast<int>(start_y + i * stepY);
+		SetCursorPos(currentX, currentY);
+		Sleep(duration / numSteps);
+	}
+	mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0);
+	mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
+}
+

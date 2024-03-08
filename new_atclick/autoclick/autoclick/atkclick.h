@@ -13,7 +13,9 @@ public:
 	void Recording();
 	void Song();
 	void Start();
-	// lembrar de criar uma funcao para adicionar delay nos clicks, deixar com que o usuario possa definir o tempo.
+	void LeftClick(int pX, int pY,int click, int duration);
+	void RightClick(int pX, int pY, int click, int duration);
+	
 
 
 };
