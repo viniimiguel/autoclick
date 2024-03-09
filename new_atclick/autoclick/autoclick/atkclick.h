@@ -13,8 +13,8 @@ public:
 	void Recording();
 	void Song();
 	void Start();
-	void LeftClick(int pX, int pY,int click, int duration);
-	void RightClick(int pX, int pY, int click, int duration);
+	void LeftClick(int pX, int pY, int duration);
+	void RightClick(int pX, int pY, int duration);
 	
 
 

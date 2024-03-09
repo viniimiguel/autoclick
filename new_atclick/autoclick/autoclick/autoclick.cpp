@@ -9,7 +9,7 @@ int main() {
 		<< "Bem vindo ao macro Clks" << std::endl
 		<< "*-*-**-*-**-*-**-*-**-*-**-*-**-*-**-*-*" << std::endl
 		<< "Segure a tecla (H) para parar de gravar seus clicks" << std::endl;
-
+	std::cout << "segure a tecla (I) para parar o macro" << std::endl;
 	m1->Recording();
 	m1->Start();
 	return 0;
